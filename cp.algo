@@ -1,0 +1,34 @@
+
+ALGORITHM Algorithms_and_its_elements
+
+VAR
+    Phrase: STRING
+    Voyelle, Caractere, i: INTEGER = 0
+    n : INTEGER
+    Mot : INTEGER = 1
+
+BEGIN
+    n = Phrase.lenght
+    REPEAT
+            write ( Ecrire une Phrase )
+            read ( Phrase )    
+    UNTIL ( Phrase [n-1]= "." )
+    tolowercase ( Phrase )
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        IF ( Phrase [i]= " " ) THEN
+        Mot =+1
+        ELSE
+        Caractere =+1
+        END_IF
+        SWITCH ( Phrase [i] ) DO
+            case "a" : Voyelle =+1 break ;
+            case "e" : Voyelle =+1 break ;
+            case "i" : Voyelle =+1 break ;
+            case "o" : Voyelle =+1 break ;
+            case "u" : Voyelle =+1 break ;
+            case "y" : Voyelle =+1 break ;
+            default : break
+        END_SWITCH
+    END_FOR
+    write ( Mot, Voyelle, Caractere )
+END
